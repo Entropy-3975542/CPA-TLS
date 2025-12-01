@@ -74,7 +74,7 @@ Test raw cryptographic operations for each hybrid scheme:
 openssl speed -seconds 3 <SCHEME>
 ```
 Replace `<SCHEME>` with: `X25519MLKEM768`, `SecP256r1MLKEM768`, or `SecP384r1MLKEM1024`.
-This returns test results based on a 3-second measurement period.
+This command returns test results for key generation, encapsulation, and decapsulation operations over a 3-second period.
 
 ### Protocol-Level Benchmarking
 
