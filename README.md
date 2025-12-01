@@ -20,26 +20,33 @@ sudo apt install build-essential checkinstall zlib1g-dev -y
 ```
 
 ### Build & Install OpenSSL 3.6.0
+
+#### Download and extract
 ```bash
-# Download and extract
 wget https://github.com/openssl/openssl/releases/download/openssl-3.6.0/openssl-3.6.0.tar.gz
 tar -xzvf openssl-3.6.0.tar.gz
 cd openssl-3.6.0
+```
 
-# Configure and compile
+#### Configure and compile
+```bash
 ./config --prefix=/usr/local/openssl --openssldir=/usr/local/openssl shared zlib
 make
 sudo make install
+```
 
-# Update library paths
+#### Update library paths
+```bash
 echo "/usr/local/openssl/lib64" | sudo tee -a /etc/ld.so.conf.d/openssl.conf
 sudo ldconfig
-
-# Add to PATH
-export PATH=/usr/local/openssl/bin:$PATH
-# You can add this line to your `~/.bashrc` or `~/.profile` file to
-# have it configured automatically each time you open a new terminal
 ```
+
+#### Add to PATH
+```bash
+export PATH=/usr/local/openssl/bin:$PATH
+```
+You can add this line to your `~/.bashrc` or `~/.profile` file to
+have it configured automatically each time you open a new terminal
 
 ### Verification
 ```bash
@@ -49,7 +56,7 @@ openssl version
 
 ## 🔄 CPA-Secure ML-KEM Implementation
 
-To test with the CPA-secure ML-KEM variant:
+OpenSSL uses a CCA-secure MLKEM implementation based on the FIPS 203 standard. To test with the CPA-secure version:
 
 1. **Backup** the original `ml_kem.c` in `/openssl-3.6.0/crypto/ml_kem/`.
 
