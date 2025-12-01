@@ -10,6 +10,7 @@ The project enables reproduction of the performance evaluation experiments compa
 - **Python**: Version 3.12.3
 
 ## 📥 OpenSSL Installation & Configuration
+The experiments were conducted using OpenSSL 3.6.0 (released October 1, 2025). Follow these steps to compile and install it from source (installation guide reference: https://www.yisu.com/ask/98212499.html. Credit and thanks to the original author):
 
 ### Prerequisites
 ```bash
@@ -33,13 +34,9 @@ sudo make install
 echo "/usr/local/openssl/lib64" | sudo tee -a /etc/ld.so.conf.d/openssl.conf
 sudo ldconfig
 
-# Add to PATH (Optional)
-## To ensure the system uses the newly installed OpenSSL version, add the following line
-## to your `~/.bashrc` or `~/.profile`:
-## export PATH=/usr/local/openssl/bin:$PATH
-## Then reload the shell configuration:
-source ~/.bashrc # if the line is added to `~/.bashrc`
-## or source ~/.profile if the line is added to `~/.profile`
+# Add to PATH
+export PATH=/usr/local/openssl/bin:$PATH
+## You can add this line to your `~/.bashrc` or `~/.profile` file to automatically configure it upon each login.
 ```
 
 ### Verification
