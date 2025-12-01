@@ -7,7 +7,7 @@ The project enables reproduction of the performance evaluation experiments compa
 ## 🛠️ System Requirements
 
 - **Operating System**: Ubuntu 24.04 LTS
-- **Processor**: 64-bit CPU (x86_64 or ARM64 architecture)
+- **Processor**: 64-bit CPU (x86_64 or ARM architecture)
 - **Python**: Version 3.12.3
 
 ## 📥 OpenSSL Installation & Configuration
