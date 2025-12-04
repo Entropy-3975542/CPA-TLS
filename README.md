@@ -128,7 +128,7 @@ Groups = X25519MLKEM768:SecP256r1MLKEM768:SecP384r1MLKEM1024
 
 ## 🤖 Automated Testing
 
-To ensure statistical significance, we conducted 50 test iterations for each scheme under both CCA-secure and CPA-secure MLKEM versions. Two Python scripts are provided for automated testing:
+To ensure statistical significance, we conducted 50 test iterations for each scheme under both CCA-secure and CPA-secure ML-KEM versions. Two Python scripts are provided for automated testing:
 
 ### Algorithm-Level Tests
 ```bash
